@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      android:versionCode="6"
+      android:versionName="1.111008" 
+      package="com.xiaojxiao.military.activity">
+    <uses-sdk android:minSdkVersion="4" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".Menu"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity android:name=".ListTabGroup"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.ListTabGroup" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".SearchTabGroup"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.SearchTabGroup" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".Search"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.Search" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".About"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.About" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".RankList"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.RankList" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".CountryList"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.CountryList" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".BranchList"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.BranchList" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".RankDetail"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.xiaojxiao.activity.RankDetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+		<activity android:name="com.google.ads.AdActivity"
+              	  android:configChanges="keyboard|keyboardHidden|orientation"/>
+              
+          
+    </application>
+    
+    <supports-screens android:resizeable="true"
+	                  android:smallScreens="true"
+	                  android:normalScreens="true"
+	                  android:largeScreens="true"
+	                  android:anyDensity="true"/>
+    
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+</manifest>

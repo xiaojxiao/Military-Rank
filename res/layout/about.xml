@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+  android:paddingTop="25dip" android:orientation="vertical" android:layout_width="fill_parent" android:layout_gravity="center_horizontal" android:gravity="center_horizontal" android:layout_height="fill_parent">
+    <TextView android:text="@string/about" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="14dip" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:layout_marginTop="50dip" android:gravity="center_horizontal"  android:layout_weight="1"></TextView>
+
+	<com.google.ads.AdView android:id="@+id/ad_about"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="10dip"
+                         ads:adUnitId="a14e2ce7576f2a3"
+                         ads:adSize="BANNER"
+                         ads:keywords="military"
+                         ads:refreshInterval="60"/>
+</LinearLayout>

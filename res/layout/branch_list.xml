@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
+      <ImageButton android:id="@+id/btn_back_1" android:layout_gravity="right" android:layout_width="24dip" android:layout_height="24dip" android:layout_marginRight="10dip" android:layout_marginTop="15dip" android:scaleType="fitCenter" android:background="@drawable/back"></ImageButton>
+  
+  <GridView
+    android:id="@+id/branch_gridview"  
+    android:layout_width="fill_parent"   
+    android:layout_height="fill_parent"  
+    android:numColumns="auto_fit"  
+    android:verticalSpacing="10dip"  
+    android:horizontalSpacing="10dip"  
+    android:columnWidth="120dip"  
+    android:stretchMode="columnWidth"  
+    android:gravity="center"  
+	android:layout_marginTop="15dip"
+	android:layout_weight="1"/>
+  
+  
+    
+    <com.google.ads.AdView android:id="@+id/ad_branch"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="10dip"
+                         ads:adUnitId="a14e2ce7576f2a3"
+                         ads:adSize="BANNER"/>
+  
+</LinearLayout>

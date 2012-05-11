@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_margin="2dip" android:layout_height="50dip" android:padding="5dip" android:background="@drawable/country_bg">
+  
+  	<ImageView android:id="@+id/country_list_item_flag" android:src="@drawable/icon" android:layout_height="48dip" android:layout_width="48dip" android:layout_centerVertical="true" android:paddingTop="5dip"></ImageView>
+  	<TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="Country" android:id="@+id/country_list_item_name" android:layout_toRightOf="@+id/country_list_item_flag" android:layout_alignTop="@+id/country_list_item_flag" android:textColor="#FFFFFF" android:textSize="20dip" android:layout_marginLeft="6dip" android:typeface="sans" android:gravity="center_vertical|center_horizontal"></TextView>
+  	<TextView android:layout_width="wrap_content" android:layout_below="@+id/country_list_item_name" android:layout_height="wrap_content" android:layout_alignLeft="@+id/country_list_item_name" android:layout_alignRight="@+id/country_list_item_name" android:id="@+id/country_list_item_locale_name" android:gravity="center_horizontal" android:text="country" android:textSize="10dip" android:typeface="sans"></TextView>
+		
+ 		
+	
+</RelativeLayout>

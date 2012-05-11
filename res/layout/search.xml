@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+  android:paddingTop="35dip" android:orientation="vertical" android:layout_width="fill_parent" android:layout_gravity="center_horizontal" android:gravity="center_horizontal" android:layout_height="fill_parent">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/relativeLayout1" android:gravity="center_horizontal">
+        <AutoCompleteTextView android:id="@+id/txt_keyword" android:layout_height="40dip" android:layout_alignParentLeft="true" android:layout_width="250dip" android:layout_centerHorizontal="true" android:layout_marginLeft="10dip" android:layout_marginRight="1dip" android:hint="Rank Name (Private etc)"></AutoCompleteTextView>
+        <ImageButton android:id="@+id/btn_search" android:layout_height="wrap_content" android:layout_width="40dip" android:layout_marginRight="10dip" android:layout_toRightOf="@+id/txt_keyword" android:layout_alignTop="@+id/txt_keyword" android:layout_alignBottom="@+id/txt_keyword" android:background="@drawable/search"></ImageButton>
+    </RelativeLayout>
+
+	
+	<ListView android:layout_width="fill_parent" 
+    		  android:id="@+id/listview_search" 
+    		  android:layout_height="fill_parent" android:layout_margin="20dip" android:background="@drawable/boder_bg" android:cacheColorHint="#00000000" android:divider="#70AC8C75" android:dividerHeight="1dip" android:visibility="invisible" android:layout_weight="1" >
+	</ListView>
+	
+	
+	<com.google.ads.AdView android:id="@+id/ad_search"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="10dip"
+                         ads:adUnitId="a14e2ce7576f2a3"
+                         ads:adSize="BANNER"/>
+</LinearLayout>

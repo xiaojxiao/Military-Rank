@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Menu!</string>
+    <string name="app_name">World Military Ranks</string>
+    <string name="loading">Creating database...Please wait...</string>
+    <string name="about">Thanks You!\n\n More Features and Countries are coming!\n\n\nYou can click the AD to remove the AD banner</string>
+</resources>

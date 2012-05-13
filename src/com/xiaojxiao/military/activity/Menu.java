@@ -50,7 +50,7 @@ public class Menu extends ActivityGroup
 			
 			//Log.i("Menu", newVersionCode + "   " + oldVersionCode);
 			//if the version has been changed, copy the database again
-			if(newVersionCode != oldVersionCode)
+			//if(newVersionCode != oldVersionCode)
 			{
 				rankDBHelper = new RankDBHelper(this);
 				rankDBHelper.copyFromAsset();

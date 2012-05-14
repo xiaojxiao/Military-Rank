@@ -3,6 +3,8 @@ package com.xiaojxiao.military.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.xiaojxiao.military.util.TabContent;
+
 import android.app.ActivityGroup;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +18,8 @@ public class SearchTabGroup extends ActivityGroup
 	public static SearchTabGroup searchTabGroup;
 	static List<View> view_history = new ArrayList<View>();
 	
+	static List<TabContent> content_history = new ArrayList<TabContent>();
+	
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
@@ -23,6 +27,7 @@ public class SearchTabGroup extends ActivityGroup
 		
 		searchTabGroup = this;
 		view_history = new ArrayList<View>();
+		content_history = new ArrayList<TabContent>();
 		
 		Intent intent = new Intent(SearchTabGroup.this, Search.class);
 		
@@ -39,6 +44,9 @@ public class SearchTabGroup extends ActivityGroup
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  //Important!
 		View new_view = this.getLocalActivityManager().startActivity("tag1", intent).getDecorView();
 		view_history.add(new_view);
+		
+		content_history.add(new TabContent(id, intent));
+		
 		setContentView(new_view);
 	}
 	
@@ -47,6 +55,7 @@ public class SearchTabGroup extends ActivityGroup
 	 */
 	public void back()
 	{
+		/*
 		if(view_history != null && view_history.size() > 0)
 		{
 			//Log.i("back", view_history.size() + "");
@@ -59,6 +68,33 @@ public class SearchTabGroup extends ActivityGroup
 			else 
 			{
 				View prev_view = view_history.get(view_history.size()-1);
+				
+				setContentView(prev_view);
+			}
+		}
+		else 
+		{
+			finish();
+		}
+		*/
+		
+		if(content_history != null && content_history.size() > 0)
+		{
+			Log.i("back", content_history.size() + "");
+			content_history.remove(content_history.size()-1);
+			
+			if(content_history.size() <= 0)
+			{
+				finish();
+			}
+			else 
+			{
+				TabContent content = content_history.get(content_history.size()-1);
+				
+				Intent intent = content.getIntent();
+				
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  //Important!
+				View prev_view = this.getLocalActivityManager().startActivity(content.getId(), intent).getDecorView();
 				setContentView(prev_view);
 			}
 		}
